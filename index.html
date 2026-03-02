@@ -39,7 +39,7 @@
         .app-container { 
             display: flex; 
             flex: 1; 
-            min-height: 0;  /* এটা খুব ইম্পরট্যান্ট */
+            min-height: 0;
             overflow: hidden;
         }
 
@@ -52,7 +52,7 @@
             justify-content: center; 
             padding: 10px 0;
             border-bottom: 4px solid var(--accent);
-            min-height: 0;  /* এটা খুব ইম্পরট্যান্ট */
+            min-height: 0;
         }
         
         .video-box { 
@@ -84,7 +84,7 @@
             display: flex; 
             flex-direction: column; 
             background: #080808; 
-            min-height: 0;  /* এটা খুব ইম্পরট্যান্ট */
+            min-height: 0;
             height: 100%;
         }
 
@@ -134,9 +134,9 @@
             padding: 15px; 
             flex: 1; 
             width: 100%; 
-            overflow-y: auto;  /* এইটা স্ক্রোল করার জন্য */
+            overflow-y: auto;
             overflow-x: hidden;
-            min-height: 0;  /* এটা খুব ইম্পরট্যান্ট */
+            min-height: 0;
             height: 100%;
         }
         
@@ -233,74 +233,43 @@
             100% { transform: rotate(360deg); } 
         }
 
-        /* Footer - Fixed at bottom */
-        .footer-fixed { 
-            width: 100%; 
-            height: 50px; 
-            background: #0a0a0a; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* ===== নতুন ফুটার ডিজাইন ===== */
+        .footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 25px 15px;
             border-top: 2px solid var(--accent);
             flex-shrink: 0;
-            font-size: 12px;
-            color: #aaa;
-        }
-        
-        .footer-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            padding: 0 15px;
-        }
-        
-        .footer-copyright { 
-            color: #ccc;
-            font-weight: 400;
-        }
-        
-        .footer-dev { 
-            color: #888;
-        }
-        
-        .footer-dev a { 
-            color: var(--accent); 
-            text-decoration: none;
-            font-weight: 600;
-            margin-left: 5px;
-        }
-        
-        .footer-dev a:hover { 
-            text-decoration: underline;
         }
 
-        /* Telegram */
-        .tg-wrapper { 
-            position: fixed; 
-            bottom: 70px; 
-            right: 20px; 
-            z-index: 1001; 
+        .footer-copy {
+            font-size: 14px;
+            color: #ccc;
+            line-height: 1.6;
         }
-        
-        .tg-btn { 
-            width: 50px; 
-            height: 50px; 
-            background: var(--tg-color); 
-            color: white; 
-            border-radius: 50%; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            font-size: 22px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
-            text-decoration: none;
-            transition: 0.3s;
+
+        .footer-copy .brand {
+            color: #00ffcc;
+            font-weight: bold;
+            letter-spacing: 0.5px;
         }
-        
-        .tg-btn:hover { 
-            transform: scale(1.1); 
+
+        .footer-credit {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #aaa;
+            line-height: 1.8;
+        }
+
+        .footer-credit span {
+            color: #00ffcc;
+            font-weight: bold;
+        }
+
+        .footer-credit b {
+            color: #ffffff;
+            font-weight: 700;
         }
 
         /* Mobile Fixes */
@@ -320,24 +289,13 @@
                 gap: 10px; 
             }
             
-            .footer-fixed { 
-                height: 55px;
-                font-size: 11px;
+            .footer {
+                padding: 20px 12px;
             }
             
-            .footer-content {
-                gap: 8px;
-            }
-            
-            .tg-wrapper { 
-                bottom: 75px; 
-                right: 15px; 
-            }
-            
-            .tg-btn { 
-                width: 45px; 
-                height: 45px; 
-                font-size: 20px;
+            .footer-copy,
+            .footer-credit {
+                font-size: 12px;
             }
         }
     </style>
@@ -359,19 +317,25 @@
             <div id="channelContainer" class="channel-container"></div>
         </div>
     </div>
-    <footer class="footer-fixed">
-        <div class="footer-content">
-            <span class="footer-copyright">© 2026–2027 Stream X BD.</span>
-            <span class="footer-dev">Developer: <a href="https://t.me/monirul_Islam_SM" target="_blank">Monirul Islam</a></span>
+    
+    <!-- নতুন ফুটার -->
+    <footer class="footer">
+        <div class="footer-copy">
+            Copyright © <span id="year"></span> 
+            <span class="brand">Stream X BD</span>. All rights reserved.
+        </div>
+        <div class="footer-credit">
+            <p>Special Thanks: <span>SM Team</span></p>
+            <p>Developer: <b>Monirul Islam</b></p>
         </div>
     </footer>
 </div>
 
-<a href="https://t.me/monirul_Islam_SM" target="_blank" class="tg-wrapper">
-    <div class="tg-btn"><i class="fab fa-telegram-plane"></i></div>
-</a>
-
 <script>
+    // Auto Year Script
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // চ্যানেল লোড করার ফাংশন
     async function initApp() {
         try {
             const response = await fetch('channels.json');
@@ -380,24 +344,20 @@
             const channelContainer = document.getElementById('channelContainer');
             let isFirst = true;
 
-            // ক্লিয়ার কন্টেইনার
             tabInner.innerHTML = '';
             channelContainer.innerHTML = '';
 
             Object.keys(data).forEach((category, index) => {
-                // ট্যাব বাটন তৈরি
                 const btn = document.createElement('div');
                 btn.className = `tab-btn ${isFirst ? 'active' : ''}`;
                 btn.innerText = category;
                 btn.onclick = (e) => openTab(e, `cat_${index}`);
                 tabInner.appendChild(btn);
 
-                // গ্রিড তৈরি
                 const grid = document.createElement('div');
                 grid.id = `cat_${index}`;
                 grid.className = `channel-grid ${isFirst ? 'active' : ''}`;
 
-                // চ্যানেল কার্ড তৈরি
                 data[category].forEach((chan, chIndex) => {
                     const card = document.createElement('div');
                     card.className = 'channel-card';
