@@ -111,4 +111,17 @@
   
     }
   ]
-}
+
+	
+  "Music": [
+   {
+      "name": "9Xm",
+      "url": "https://eamintalukdar.pages.dev/play.php?id=9xm",
+      "logo": "https://i.postimg.cc/P5yq7ncL/20250529_120144.png"
+   },
+	    {
+      "name": "Zoom",
+      "url": "https://eamintalukdar.pages.dev/play.php?id=zoom",
+      "logo": "https://i.postimg.cc/7hz6tG8D/20250529_121941.png"
+   },
+	  }
