@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>𝐁𝐨𝐧𝐠𝐨 𝐅𝐥𝐢𝐱</title>
+    <link rel="icon" href="https://i.postimg.cc/8kWYsw9n/20241228_183443.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --bg-color: #050505; --accent: #ff0000; --tg-color: #0088cc; }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        
+        body, html { 
+            margin: 0; padding: 0; width: 100%; height: 100%;
+            background-color: var(--bg-color); color: #fff; 
+            font-family: 'Poppins', sans-serif; overflow: hidden;
+        }
+
+        /* --- Preloader --- */
+        #preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; display: flex; justify-content: center; align-items: center; z-index: 10000; transition: 0.5s; }
+        .loader-content { text-align: center; }
+        .loader-logo { width: 150px; animation: smoothPulse 2.5s infinite; }
+        .loader-text { margin-top: 20px; font-size: 30px; font-weight: 900; letter-spacing: 3px; }
+        @keyframes smoothPulse { 0%, 100% { transform: scale(0.9); opacity: 0.7; } 50% { transform: scale(1.05); opacity: 1; } }
+
+        .wrapper { display: flex; flex-direction: column; height: 100vh; width: 100%; }
+        .header-line { width: 100%; height: 5px; background: var(--accent); flex-shrink: 0; }
+
+        .app-container { display: flex; flex: 1; overflow: hidden; }
+
+        /* Player Area */
+        .player-area { 
+            flex: 1.8; background: #000; display: flex; flex-direction: column; 
+            justify-content: center; padding: 10px 0;
+            border-bottom: 4px solid var(--accent);
+        }
+        .video-box { width: 100%; max-width: 1000px; margin: 0 auto; position: relative; background: #000; }
+        .video-box::before { content: ""; display: block; padding-top: 56.25%; }
+        iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+        /* Content Area */
+        .content-area { flex: 1; display: flex; flex-direction: column; background: #080808; overflow-y: auto; }
+
+        /* Tabs - Mobile Centered */
+        .tab-wrapper { 
+            background: #000; padding: 15px 0; 
+            text-align: center; width: 100%;
+            overflow-x: auto; scrollbar-width: none; 
+            white-space: nowrap;
+        }
+        .tab-wrapper::-webkit-scrollbar { display: none; }
+        .tab-inner { display: inline-flex; gap: 10px; padding: 0 20px; }
+
+        .tab-btn { 
+            padding: 10px 18px; background: #111; border-radius: 8px; 
+            font-size: 13px; font-weight: 800; cursor: pointer; border: 1px solid #333; 
+            color: #888; transition: 0.3s;
+        }
+        .tab-btn.active { background: var(--accent); color: #fff; border-color: #fff; box-shadow: 0 0 10px rgba(255,0,0,0.5); }
+
+        /* Channel Grid */
+        .channel-container { padding: 15px; flex: 1; width: 100%; display: flex; flex-direction: column; align-items: center; }
+        .channel-grid { 
+            display: none; width: 100%; max-width: 1200px;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); 
+            gap: 15px; justify-content: center;
+        }
+        .channel-grid.active { display: grid; }
+        
+        /* Balanced RGB Border (1px added to previous version) */
+        .channel-card { 
+            position: relative; background: #111; border-radius: 12px; padding: 2.5px; /* Added 1px */
+            cursor: pointer; aspect-ratio: 16/10; overflow: hidden; z-index: 1; 
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .channel-card::before { 
+            content: ""; position: absolute; width: 250%; height: 250%; top: -75%; left: -75%; 
+            background: conic-gradient(from 0deg, red, yellow, lime, aqua, blue, magenta, red); 
+            animation: rotateRGB 3s linear infinite; z-index: -1; 
+            opacity: 0.7;
+        }
+
+        /* Active Card Style (Bolder) */
+        .channel-card.active { transform: scale(1.06); padding: 5px; box-shadow: 0 0 25px rgba(255, 0, 0, 0.6); }
+        .channel-card.active::before { 
+            animation: rotateRGB 1.2s linear infinite; 
+            filter: blur(1px);
+            opacity: 1;
+        }
+        
+        .inner-card { background: #fff; width: 100%; height: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .inner-card img { width: 70%; height: 70%; object-fit: contain; transform: scale(1.5); } 
+        
+        @keyframes rotateRGB { 100% { transform: rotate(360deg); } }
+
+        /* Footer */
+        .footer-fixed { 
+            width: 100%; height: 60px; background: #000; 
+            display: flex; align-items: center; justify-content: center; 
+            border-top: 4px solid var(--accent); flex-shrink: 0;
+        }
+        .footer-text { font-size: 16px; font-weight: 800; color: #fff; letter-spacing: 2px; }
+
+        /* Telegram */
+        .tg-wrapper { position: fixed; bottom: 85px; right: 20px; z-index: 1001; }
+        .tg-btn { 
+            width: 55px; height: 55px; background: var(--tg-color); 
+            color: white; border-radius: 50%; display: flex; 
+            align-items: center; justify-content: center; font-size: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); text-decoration: none;
+        }
+
+        /* Mobile Fixes */
+        @media (max-width: 768px) {
+            .app-container { flex-direction: column; }
+            .player-area { flex: none; width: 100%; border-bottom: 4px solid var(--accent); }
+            .channel-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; }
+            .footer-fixed { position: fixed; bottom: 0; left: 0; z-index: 1000; }
+            .tab-inner { display: inline-flex; justify-content: center; width: auto; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="preloader">
+    <div class="loader-content">
+        <img src="https://i.postimg.cc/8kWYsw9n/20241228_183443.png" class="loader-logo">
+        <div class="loader-text">𝐁𝐎𝐍𝐆𝐎 <span style="color:red">𝐅𝐋𝐈𝐗</span></div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <div class="header-line"></div>
+    <div class="app-container">
+        <div class="player-area">
+            <div class="video-box">
+                <iframe id="tvPlayer" src="" allow="autoplay; encrypted-media" allowfullscreen="true"></iframe>
+            </div>
+        </div>
+        <div class="content-area">
+            <div id="tabWrapper" class="tab-wrapper"><div class="tab-inner" id="tabInner"></div></div>
+            <div id="channelContainer" class="channel-container"></div>
+        </div>
+    </div>
+    <footer class="footer-fixed">
+        <p class="footer-text">© 2026 <span style="color:red">𝐁𝐎𝐍𝐆𝐎 𝐅𝐋𝐈𝐗</span></p>
+    </footer>
+</div>
+
+<a href="https://t.me/eamintalukdar" target="_blank" class="tg-wrapper">
+    <div class="tg-btn"><i class="fab fa-telegram-plane"></i></div>
+</a>
+
+<script>
+    async function initApp() {
+        try {
+            const response = await fetch('channels.json');
+            const data = await response.json();
+            const tabInner = document.getElementById('tabInner');
+            const channelContainer = document.getElementById('channelContainer');
+            let isFirst = true;
+
+            Object.keys(data).forEach((category, index) => {
+                const btn = document.createElement('div');
+                btn.className = `tab-btn ${isFirst ? 'active' : ''}`;
+                btn.innerText = category;
+                btn.onclick = (e) => openTab(e, `cat_${index}`);
+                tabInner.appendChild(btn);
+
+                const grid = document.createElement('div');
+                grid.id = `cat_${index}`;
+                grid.className = `channel-grid ${isFirst ? 'active' : ''}`;
+
+                data[category].forEach((chan, chIndex) => {
+                    const card = document.createElement('div');
+                    card.className = 'channel-card';
+                    card.innerHTML = `<div class="inner-card"><img src="${chan.logo}" alt="${chan.name}"></div>`;
+                    card.onclick = () => loadChannel(chan.url, card);
+                    grid.appendChild(card);
+                    if(isFirst && chIndex === 0) setTimeout(() => loadChannel(chan.url, card), 500);
+                });
+                channelContainer.appendChild(grid);
+                isFirst = false;
+            });
+
+            setTimeout(() => {
+                const preloader = document.getElementById('preloader');
+                preloader.style.opacity = '0';
+                setTimeout(() => { preloader.style.display = 'none'; }, 500);
+            }, 1500);
+        } catch (e) { console.error(e); }
+    }
+
+    function openTab(evt, catId) {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        evt.currentTarget.classList.add('active');
+        document.querySelectorAll('.channel-grid').forEach(g => g.classList.remove('active'));
+        document.getElementById(catId).classList.add('active');
+    }
+
+    function loadChannel(url, el) {
+        document.querySelectorAll('.channel-card').forEach(c => c.classList.remove('active'));
+        el.classList.add('active');
+        document.getElementById('tvPlayer').src = url;
+    }
+
+    window.onload = initApp;
+</script>
+</body>
+</html>
