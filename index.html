@@ -90,20 +90,47 @@
 
         /* Footer */
         .footer-fixed { 
-            width: 100%; height: 60px; background: #000; 
-            display: flex; align-items: center; justify-content: center; 
+            width: 100%; height: auto; min-height: 70px; background: #000; 
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center; 
             border-top: 4px solid var(--accent); flex-shrink: 0;
+            padding: 12px 15px;
+            text-align: center;
         }
-        .footer-text { font-size: 16px; font-weight: 800; color: #fff; letter-spacing: 2px; }
+        .footer-copyright { 
+            font-size: 14px; 
+            font-weight: 400; 
+            color: #ccc; 
+            letter-spacing: 0.5px;
+            line-height: 1.6;
+        }
+        .footer-dev { 
+            font-size: 13px; 
+            font-weight: 400; 
+            color: #888; 
+            margin-top: 5px;
+        }
+        .footer-dev a { 
+            color: var(--accent); 
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .footer-dev a:hover { 
+            text-decoration: underline;
+            color: #ff3333;
+        }
 
         /* Telegram */
-        .tg-wrapper { position: fixed; bottom: 85px; right: 20px; z-index: 1001; }
+        .tg-wrapper { position: fixed; bottom: 90px; right: 20px; z-index: 1001; }
         .tg-btn { 
             width: 55px; height: 55px; background: var(--tg-color); 
             color: white; border-radius: 50%; display: flex; 
             align-items: center; justify-content: center; font-size: 24px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); text-decoration: none;
+            transition: 0.3s;
         }
+        .tg-btn:hover { transform: scale(1.1); }
 
         /* Mobile Fixes */
         @media (max-width: 768px) {
@@ -111,7 +138,9 @@
             .player-area { flex: none; width: 100%; border-bottom: 4px solid var(--accent); }
             .channel-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; }
             .footer-fixed { position: fixed; bottom: 0; left: 0; z-index: 1000; }
-            .tab-inner { display: inline-flex; justify-content: center; width: auto; }
+            .tg-wrapper { bottom: 90px; }
+            .footer-copyright { font-size: 12px; }
+            .footer-dev { font-size: 11px; }
         }
     </style>
 </head>
@@ -131,7 +160,8 @@
         </div>
     </div>
     <footer class="footer-fixed">
-        <p class="footer-text">© 2026 <span style="color:red">𝐒𝐭𝐫𝐞𝐚𝐦 𝐗 𝐁𝐃</span></p>
+        <div class="footer-copyright">© 2026–2027 Stream X BD. All rights reserved.</div>
+        <div class="footer-dev">Developer : <a href="https://t.me/monirul_Islam_SM" target="_blank">Monirul Islam</a></div>
     </footer>
 </div>
 
