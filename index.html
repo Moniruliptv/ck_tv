@@ -17,23 +17,42 @@
             font-family: 'Poppins', sans-serif; overflow: hidden;
         }
 
-        .wrapper { display: flex; flex-direction: column; height: 100vh; width: 100%; }
+        .wrapper { 
+            display: flex; 
+            flex-direction: column; 
+            height: 100vh; 
+            width: 100%; 
+            position: relative;
+        }
         .header-line { width: 100%; height: 5px; background: var(--accent); flex-shrink: 0; }
 
-        .app-container { display: flex; flex: 1; overflow: hidden; }
+        .app-container { 
+            display: flex; 
+            flex: 1; 
+            overflow: hidden;
+            height: calc(100vh - 70px); /* হেডার ও ফুটার বাদে */
+        }
 
         /* Player Area */
         .player-area { 
             flex: 1.8; background: #000; display: flex; flex-direction: column; 
             justify-content: center; padding: 10px 0;
             border-bottom: 4px solid var(--accent);
+            height: 100%;
         }
         .video-box { width: 100%; max-width: 1000px; margin: 0 auto; position: relative; background: #000; }
         .video-box::before { content: ""; display: block; padding-top: 56.25%; }
         iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
 
         /* Content Area */
-        .content-area { flex: 1; display: flex; flex-direction: column; background: #080808; overflow-y: auto; }
+        .content-area { 
+            flex: 1; 
+            display: flex; 
+            flex-direction: column; 
+            background: #080808; 
+            overflow: hidden;
+            height: 100%;
+        }
 
         /* Tabs - Mobile Centered */
         .tab-wrapper { 
@@ -41,6 +60,7 @@
             text-align: center; width: 100%;
             overflow-x: auto; scrollbar-width: none; 
             white-space: nowrap;
+            flex-shrink: 0;
         }
         .tab-wrapper::-webkit-scrollbar { display: none; }
         .tab-inner { display: inline-flex; gap: 10px; padding: 0 20px; }
@@ -52,12 +72,36 @@
         }
         .tab-btn.active { background: var(--accent); color: #fff; border-color: #fff; box-shadow: 0 0 10px rgba(255,0,0,0.5); }
 
-        /* Channel Grid */
-        .channel-container { padding: 15px; flex: 1; width: 100%; display: flex; flex-direction: column; align-items: center; }
+        /* Channel Container - এখন সঠিকভাবে স্ক্রোল হবে */
+        .channel-container { 
+            padding: 15px; 
+            flex: 1; 
+            width: 100%; 
+            overflow-y: auto;
+            overflow-x: hidden;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent) #333;
+        }
+        
+        .channel-container::-webkit-scrollbar {
+            width: 5px;
+        }
+        .channel-container::-webkit-scrollbar-track {
+            background: #333;
+        }
+        .channel-container::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 10px;
+        }
+        
         .channel-grid { 
-            display: none; width: 100%; max-width: 1200px;
+            display: none; 
+            width: 100%; 
+            max-width: 1200px;
             grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); 
-            gap: 15px; justify-content: center;
+            gap: 15px; 
+            justify-content: center;
+            margin: 0 auto;
         }
         .channel-grid.active { display: grid; }
         
@@ -88,45 +132,57 @@
         
         @keyframes rotateRGB { 100% { transform: rotate(360deg); } }
 
-        /* Footer */
+        /* Footer - Fixed at bottom */
         .footer-fixed { 
-            width: 100%; height: auto; min-height: 70px; background: #000; 
-            display: flex; flex-direction: column;
-            align-items: center; justify-content: center; 
-            border-top: 4px solid var(--accent); flex-shrink: 0;
-            padding: 12px 15px;
-            text-align: center;
+            width: 100%; 
+            height: 50px; 
+            background: #0a0a0a; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 2px solid var(--accent);
+            flex-shrink: 0;
+            position: relative;
+            z-index: 100;
+            font-size: 12px;
+            color: #aaa;
         }
+        
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding: 0 15px;
+        }
+        
         .footer-copyright { 
-            font-size: 14px; 
-            font-weight: 400; 
-            color: #ccc; 
-            letter-spacing: 0.5px;
-            line-height: 1.6;
+            color: #ccc;
+            font-weight: 400;
         }
+        
         .footer-dev { 
-            font-size: 13px; 
-            font-weight: 400; 
-            color: #888; 
-            margin-top: 5px;
+            color: #888;
         }
+        
         .footer-dev a { 
             color: var(--accent); 
             text-decoration: none;
             font-weight: 600;
-            transition: 0.3s;
+            margin-left: 5px;
         }
+        
         .footer-dev a:hover { 
             text-decoration: underline;
-            color: #ff3333;
         }
 
         /* Telegram */
-        .tg-wrapper { position: fixed; bottom: 90px; right: 20px; z-index: 1001; }
+        .tg-wrapper { position: fixed; bottom: 70px; right: 20px; z-index: 1001; }
         .tg-btn { 
-            width: 55px; height: 55px; background: var(--tg-color); 
+            width: 50px; height: 50px; background: var(--tg-color); 
             color: white; border-radius: 50%; display: flex; 
-            align-items: center; justify-content: center; font-size: 24px;
+            align-items: center; justify-content: center; font-size: 22px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); text-decoration: none;
             transition: 0.3s;
         }
@@ -134,13 +190,40 @@
 
         /* Mobile Fixes */
         @media (max-width: 768px) {
-            .app-container { flex-direction: column; }
-            .player-area { flex: none; width: 100%; border-bottom: 4px solid var(--accent); }
-            .channel-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; }
-            .footer-fixed { position: fixed; bottom: 0; left: 0; z-index: 1000; }
-            .tg-wrapper { bottom: 90px; }
-            .footer-copyright { font-size: 12px; }
-            .footer-dev { font-size: 11px; }
+            .app-container { 
+                flex-direction: column;
+                height: calc(100vh - 60px);
+            }
+            .player-area { 
+                flex: none; 
+                width: 100%; 
+                border-bottom: 4px solid var(--accent);
+                height: auto;
+            }
+            .content-area {
+                height: auto;
+                flex: 1;
+            }
+            .channel-grid { 
+                grid-template-columns: repeat(3, 1fr); 
+                gap: 10px; 
+            }
+            .footer-fixed { 
+                height: 55px;
+                font-size: 11px;
+            }
+            .footer-content {
+                gap: 8px;
+            }
+            .tg-wrapper { 
+                bottom: 75px; 
+                right: 15px; 
+            }
+            .tg-btn { 
+                width: 45px; 
+                height: 45px; 
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -160,8 +243,10 @@
         </div>
     </div>
     <footer class="footer-fixed">
-        <div class="footer-copyright">© 2026–2027 Stream X BD. All rights reserved.</div>
-        <div class="footer-dev">Developer : <a href="https://t.me/monirul_Islam_SM" target="_blank">Monirul Islam</a></div>
+        <div class="footer-content">
+            <span class="footer-copyright">© 2026–2027 Stream X BD.</span>
+            <span class="footer-dev">Developer: <a href="https://t.me/monirul_Islam_SM" target="_blank">Monirul Islam</a></span>
+        </div>
     </footer>
 </div>
 
@@ -196,7 +281,6 @@
                     card.onclick = () => loadChannel(chan.url, card);
                     grid.appendChild(card);
                     
-                    // প্রথম ক্যাটাগরির প্রথম চ্যানেলটি অটো লোড হবে
                     if(isFirst && chIndex === 0) {
                         setTimeout(() => loadChannel(chan.url, card), 100);
                     }
@@ -208,7 +292,6 @@
 
         } catch (e) { 
             console.error(e);
-            // এরর হ্যান্ডলিং - ইউজারকে জানান
             document.getElementById('channelContainer').innerHTML = '<p style="color:red; padding:20px;">চ্যানেল লোড করতে সমস্যা হচ্ছে। পরে আবার চেষ্টা করুন।</p>';
         }
     }
@@ -226,7 +309,6 @@
         document.getElementById('tvPlayer').src = url;
     }
 
-    // পেজ লোড হওয়ার সাথে সাথেই শুরু করুন
     window.onload = initApp;
 </script>
 </body>
