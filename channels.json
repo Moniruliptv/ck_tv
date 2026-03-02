@@ -1,0 +1,114 @@
+{  
+   "Bangla": [
+    {
+      "name": "B TV",
+      "url": "https://eamintalukdar.pages.dev/play.php?id=btv",
+      "logo": "https://i.postimg.cc/JnWdHSrq/20250529-071604.png"
+    },
+    {
+      "name": "Jamuna",
+      "url": "https://eamintalukdar.pages.dev/play.php?id=jamuna",
+      "logo": "https://i.postimg.cc/L4D0hyrt/20250529-071035.png"
+   },
+   {
+      "name": "Somoy",
+      "url": "https://eamintalukdar.pages.dev/play.php?id=somoy",
+      "logo": "https://i.postimg.cc/Qxn4JFNV/20250529-071147.png"
+   }, 
+   {
+      "name": "Channel 24",
+      "url": "https://eamintalukdar.pages.dev/play.php?id=channel24",
+      "logo": "https://i.postimg.cc/nLmPznJr/20250529-071852.png"
+   }, 
+   {
+      "name": "Ekattor",
+      "url": "https://eamintalukdar.pages.dev/play.php?id=ekattor",
+      "logo": "https://i.postimg.cc/D0xCDZqj/20250529-071258.png"
+   }, 
+   {
+      "name": "ATN News",
+      "url": "https://eamintalukdar.pages.dev/play.php?id=atnnews",
+      "logo": "https://i.postimg.cc/4NBkk4fT/20250529-102724.png"
+   }, 
+
+   {
+      "name": "Bangla Vision",
+      "url": "https://eamintalukdar.pages.dev/play.php?id=banglavision",
+      "logo": "https://i.postimg.cc/JzGFfbYb/20250529-072833.png"
+   }, 
+      {
+      "name": "N TV",
+      "url": "https://eamintalukdar.pages.dev/play.php?id=ntv",
+      "logo": "https://i.postimg.cc/kgzHqBLL/20250529-072107.png"
+   }, 
+   
+      {
+      "name": "ATN Bangla",
+      "url": "https://eamintalukdar.pages.dev/play.php?id=atnbangla",
+      "logo": "https://i.postimg.cc/FHBMzPkW/20250529-102502.png"
+   }, 
+   	{
+     "name": "G TV",
+     "url": "https://eamintalukdar.pages.dev/play.php?id=gtv",
+     "logo": "https://i.postimg.cc/jjKGfnW8/20250704_201040.png"
+     },   
+	   {
+      "name": "Channel i",
+      "url": "https://eamintalukdar.pages.dev/play.php?id=channeli",
+      "logo": "https://i.postimg.cc/J47vqwbY/20250529-101717.png"
+   }, 
+      {
+      "name": "Deepto",
+      "url": "https://eamintalukdar.pages.dev/play.php?id=deepto",
+      "logo": "https://i.postimg.cc/9XPHbts0/20250529-103607.png"
+   },
+	       
+	   {
+            "name": "Colors Bangla",
+            "url": "https://eamintalukdar.pages.dev/play.php/?id=colorsbangla",
+            "logo": "https://i.postimg.cc/HLdjn6zR/20250602_220804.png"
+        },
+        {
+            "name": "Enterr 10",
+            "url": "https://eamintalukdar.pages.dev/play.php/?id=enterr10",
+            "logo": "https://i.postimg.cc/LX122cy3/20250529-111624.png"
+        },
+  
+        {
+            "name": "Akash Bangla",
+            "url": "https://eamintalukdar.pages.dev/play.php/?id=akashbangla",
+            "logo": "https://i.postimg.cc/PJ5V7VsN/20250711_062758.png"
+        }
+	   
+  ],
+  
+  
+  "Music": [
+   {
+      "name": "9Xm",
+      "url": "https://eamintalukdar.pages.dev/play.php?id=9xm",
+      "logo": "https://i.postimg.cc/P5yq7ncL/20250529_120144.png"
+   },
+	    {
+      "name": "Zoom",
+      "url": "https://eamintalukdar.pages.dev/play.php?id=zoom",
+      "logo": "https://i.postimg.cc/7hz6tG8D/20250529_121941.png"
+   },
+   {
+      "name": "Yrf Music",
+      "url": "https://eamintalukdar.pages.dev/play.php?id=yrfmusic",
+      "logo": "https://i.postimg.cc/hPFhzrTG/20250529_121624.png"
+   }, 
+   {
+      "name": "Show Box",
+      "url": "https://eamintalukdar.pages.dev/play.php?id=showbox",
+      "logo": "https://i.postimg.cc/MKyHyQmm/20250529_120709.png"
+   }, 
+   {
+      "name": "B4U Music",
+      "url": "https://eamintalukdar.pages.dev/play.php?id=b4umusic",
+      "logo": "https://i.postimg.cc/ZqfCWzxk/20250529_122103.png"
+  
+    }
+  ]
+}
