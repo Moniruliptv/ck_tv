@@ -18,13 +18,6 @@
             font-family: 'Poppins', sans-serif; overflow: hidden;
         }
 
-        /* --- Preloader --- */
-        #preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; display: flex; justify-content: center; align-items: center; z-index: 10000; transition: 0.5s; }
-        .loader-content { text-align: center; }
-        .loader-logo { width: 150px; animation: smoothPulse 2.5s infinite; }
-        .loader-text { margin-top: 20px; font-size: 30px; font-weight: 900; letter-spacing: 3px; }
-        @keyframes smoothPulse { 0%, 100% { transform: scale(0.9); opacity: 0.7; } 50% { transform: scale(1.05); opacity: 1; } }
-
         .wrapper { display: flex; flex-direction: column; height: 100vh; width: 100%; }
         .header-line { width: 100%; height: 5px; background: var(--accent); flex-shrink: 0; }
 
@@ -69,9 +62,9 @@
         }
         .channel-grid.active { display: grid; }
         
-        /* Balanced RGB Border (1px added to previous version) */
+        /* Balanced RGB Border */
         .channel-card { 
-            position: relative; background: #111; border-radius: 12px; padding: 2.5px; /* Added 1px */
+            position: relative; background: #111; border-radius: 12px; padding: 2.5px;
             cursor: pointer; aspect-ratio: 16/10; overflow: hidden; z-index: 1; 
             transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -125,13 +118,6 @@
 </head>
 <body>
 
-<div id="preloader">
-    <div class="loader-content">
-        <img src="https://i.postimg.cc/8kWYsw9n/20241228_183443.png" class="loader-logo">
-        <div class="loader-text">𝐁𝐎𝐍𝐆𝐎 <span style="color:red">𝐅𝐋𝐈𝐗</span></div>
-    </div>
-</div>
-
 <div class="wrapper">
     <div class="header-line"></div>
     <div class="app-container">
@@ -180,18 +166,22 @@
                     card.innerHTML = `<div class="inner-card"><img src="${chan.logo}" alt="${chan.name}"></div>`;
                     card.onclick = () => loadChannel(chan.url, card);
                     grid.appendChild(card);
-                    if(isFirst && chIndex === 0) setTimeout(() => loadChannel(chan.url, card), 500);
+                    
+                    // প্রথম ক্যাটাগরির প্রথম চ্যানেলটি অটো লোড হবে
+                    if(isFirst && chIndex === 0) {
+                        setTimeout(() => loadChannel(chan.url, card), 100);
+                    }
                 });
+                
                 channelContainer.appendChild(grid);
                 isFirst = false;
             });
 
-            setTimeout(() => {
-                const preloader = document.getElementById('preloader');
-                preloader.style.opacity = '0';
-                setTimeout(() => { preloader.style.display = 'none'; }, 500);
-            }, 1500);
-        } catch (e) { console.error(e); }
+        } catch (e) { 
+            console.error(e);
+            // এরর হ্যান্ডলিং - ইউজারকে জানান
+            document.getElementById('channelContainer').innerHTML = '<p style="color:red; padding:20px;">চ্যানেল লোড করতে সমস্যা হচ্ছে। পরে আবার চেষ্টা করুন।</p>';
+        }
     }
 
     function openTab(evt, catId) {
@@ -207,6 +197,7 @@
         document.getElementById('tvPlayer').src = url;
     }
 
+    // পেজ লোড হওয়ার সাথে সাথেই শুরু করুন
     window.onload = initApp;
 </script>
 </body>
