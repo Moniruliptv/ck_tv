@@ -8,12 +8,18 @@ URL_URL = "https://raw.githubusercontent.com/sm-monirulislam/FanCode-Auto-Update
 meta_lines = requests.get(META_URL).text.splitlines()
 url_lines = requests.get(URL_URL).text.splitlines()
 
-# url playlist থেকে শুধু stream link বের করা
-urls = [l.strip() for l in url_lines if l.startswith("http")]
+# url → channel name detect
+url_map = {}
+
+for line in url_lines:
+    if line.startswith("http"):
+        m = re.search(r'/([^/]+)/tracks', line)
+        if m:
+            name = m.group(1).lower()
+            url_map[name] = line.strip()
 
 channels = []
 
-url_index = 0
 tvg_id = ""
 title = ""
 logo = ""
@@ -35,17 +41,21 @@ for line in meta_lines:
 
     elif line.startswith("http"):
 
-        if url_index < len(urls):
+        key = title.lower().replace(" ", "")
 
-            channels.append({
-                "id": tvg_id,
-                "title": title,
-                "logo": logo,
-                "url": urls[url_index],
-                "category": category
-            })
+        url = ""
+        for k in url_map:
+            if key in k:
+                url = url_map[k]
+                break
 
-            url_index += 1
+        channels.append({
+            "id": tvg_id,
+            "title": title,
+            "logo": logo,
+            "url": url,
+            "category": category
+        })
 
-with open("channels.json", "w") as f:
-    json.dump(channels, f, indent=2)
+with open("channels.json","w") as f:
+    json.dump(channels,f,indent=2)
