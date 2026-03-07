@@ -2,7 +2,7 @@ import requests
 import json
 import re
 
-API_URL = "https://example.com/playlist.m3u"
+API_URL = "https://raw.githubusercontent.com/sm-monirulislam/FanCode-Auto-Update-Playlist/refs/heads/main/Playlist-2026-2-21-173326.m3u"
 
 res = requests.get(API_URL)
 lines = res.text.splitlines()
