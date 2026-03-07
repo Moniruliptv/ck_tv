@@ -1,1 +1,639 @@
-[]
+[
+  {
+    "id": "atn_bangla",
+    "title": "ATN BANGLA",
+    "logo": "http://103.144.89.251/assets/images/ATN BANGLA1745044183.png",
+    "url": "http://203.18.159.115/ATNBANGLA/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "atn_news",
+    "title": "ATN NEWS",
+    "logo": "http://103.144.89.251/assets/images/ATN NEWS1745045113.png",
+    "url": "http://203.18.159.115/ATNNEWS/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "channel_24",
+    "title": "CHANNEL 24",
+    "logo": "http://103.144.89.251/assets/images/CHANNEL 241745044263.png",
+    "url": "http://203.18.159.115/CHANNEL24/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "channel_i",
+    "title": "CHANNEL I",
+    "logo": "http://103.144.89.251/assets/images/CHANNEL I1745044237.png",
+    "url": "http://203.18.159.115/CHANNELI/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "colors_bangla_cinema",
+    "title": "COLORS BANGLA CINEMA",
+    "logo": "http://103.144.89.251/assets/images/COLORS BANGLA CINEMA1745041486.png",
+    "url": "http://203.18.159.115/DURANTATV/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "colors_bangla_hd",
+    "title": "COLORS BANGLA HD",
+    "logo": "http://103.144.89.251/assets/images/COLORS BANGLA HD1745033576.png",
+    "url": "http://203.18.159.115/ENTERR10/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "enterr_10",
+    "title": "ENTERR 10",
+    "logo": "http://103.144.89.251/assets/images/ENTERR 101745044330.png",
+    "url": "http://203.18.159.115/GTV/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "gtv",
+    "title": "GTV",
+    "logo": "http://103.144.89.251/assets/images/GTV1745042853.png",
+    "url": "http://203.18.159.115/INDEPENDENTTV/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "independent_tv",
+    "title": "INDEPENDENT TV",
+    "logo": "http://103.144.89.251/assets/images/INDEPENDENT TV1745044077.png",
+    "url": "http://203.18.159.115/JAMUNATV/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "jalsha_movies_hd",
+    "title": "JALSHA MOVIES HD",
+    "logo": "http://103.144.89.251/assets/images/JALSHA MOVIES HD1745034005.png",
+    "url": "http://203.18.159.115/NAGORIK/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "jamuna_tv",
+    "title": "JAMUNA TV",
+    "logo": "http://103.144.89.251/assets/images/JAMUNA TV1745044052.png",
+    "url": "http://203.18.159.115/MAASRANGAHD/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "maasranga_hd",
+    "title": "MAASRANGA HD",
+    "logo": "http://103.144.89.251/assets/images/MAASRANGA HD1745044117.png",
+    "url": "http://203.18.159.115/SOMOYTV/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "nagorik",
+    "title": "NAGORIK",
+    "logo": "http://103.144.89.251/assets/images/NAGORIK1745042776.png",
+    "url": "http://203.18.159.115/SONYAAT/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "somoy_tv",
+    "title": "SOMOY TV",
+    "logo": "http://103.144.89.251/assets/images/SOMOY TV1745044149.png",
+    "url": "http://203.18.159.115/ZEEBANGLAHD/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "sony_aat",
+    "title": "SONY AAT",
+    "logo": "http://103.144.89.251/assets/images/SONY AAT1745041124.png",
+    "url": "http://203.18.159.115/ZEEBANGLACINEMA/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "star_jalsha_hd",
+    "title": "STAR JALSHA HD",
+    "logo": "http://103.144.89.251/assets/images/STAR JALSHA HD1745033819.png",
+    "url": "http://203.18.159.115/STARJALSHAHD/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "sun_bangla_hd",
+    "title": "SUN BANGLA HD",
+    "logo": "http://103.144.89.251/assets/images/SUN BANGLA HD1745033791.png",
+    "url": "http://203.18.159.115/JALSHAMOVIESHD/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "zee_bangla_cinema",
+    "title": "ZEE BANGLA CINEMA",
+    "logo": "http://103.144.89.251/assets/images/ZEE BANGLA CINEMA1745040996.png",
+    "url": "http://203.18.159.115/COLORSBANGLAHD/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "zee_bangla_hd",
+    "title": "ZEE BANGLA HD",
+    "logo": "http://103.144.89.251/assets/images/ZEE BANGLA HD1745033633.png",
+    "url": "http://203.18.159.115/COLORSBANGLACINEMA/tracks-v1a1/mono.m3u8",
+    "category": "bangla"
+  },
+  {
+    "id": "a_sports_hd",
+    "title": "A SPORTS HD",
+    "logo": "http://103.144.89.251/assets/images/A SPORTS HD1745044782.png",
+    "url": "http://203.18.159.115/SUNBANGLAHD/tracks-v1a1/mono.m3u8",
+    "category": "sports"
+  },
+  {
+    "id": "eurosports_hd",
+    "title": "EUROSPORTS HD",
+    "logo": "http://103.144.89.251/assets/images/EUROSPORTS HD1745040406.png",
+    "url": "http://203.18.159.115/COLORSHD/tracks-v1a1/mono.m3u8",
+    "category": "sports"
+  },
+  {
+    "id": "fast_sports_hd",
+    "title": "FAST SPORTS HD",
+    "logo": "http://103.144.89.251/assets/images/FAST SPORTS HD1745044750.png",
+    "url": "http://203.18.159.115/COLORSCINEPLEXHD/tracks-v1a1/mono.m3u8",
+    "category": "sports"
+  },
+  {
+    "id": "golf_sports",
+    "title": "GOLF SPORTS",
+    "logo": "http://103.144.89.251/assets/images/GOLF SPORTS1745043338.png",
+    "url": "http://203.18.159.115/SONYENTHD/tracks-v1a1/mono.m3u8",
+    "category": "sports"
+  },
+  {
+    "id": "ptv_sports_hd",
+    "title": "PTV SPORTS HD",
+    "logo": "http://103.144.89.251/assets/images/PTV SPORTS HD1745044993.png",
+    "url": "http://203.18.159.115/SONYMAXHD/tracks-v1a1/mono.m3u8",
+    "category": "sports"
+  },
+  {
+    "id": "sony_sports_1_hd",
+    "title": "SONY SPORTS 1 HD",
+    "logo": "http://103.144.89.251/assets/images/sony sports 1 hd.png",
+    "url": "http://203.18.159.115/SONYPIXHD/tracks-v1a1/mono.m3u8",
+    "category": "sports"
+  },
+  {
+    "id": "sony_sports_2_hd",
+    "title": "SONY SPORTS 2 HD",
+    "logo": "http://103.144.89.251/assets/images/sony sports 2 hd.png",
+    "url": "http://203.18.159.115/STARBHARATHD/tracks-v1a1/mono.m3u8",
+    "category": "sports"
+  },
+  {
+    "id": "sony_sports_3",
+    "title": "SONY SPORTS 3",
+    "logo": "http://103.144.89.251/assets/images/Sony sports 3.png",
+    "url": "http://203.18.159.115/STARGOLDHD/tracks-v1a1/mono.m3u8",
+    "category": "sports"
+  },
+  {
+    "id": "sony_sports_4",
+    "title": "SONY SPORTS 4",
+    "logo": "http://103.144.89.251/assets/images/sony sports 4.png",
+    "url": "http://203.18.159.115/STARGOLD2HD/tracks-v1a1/mono.m3u8",
+    "category": "sports"
+  },
+  {
+    "id": "sony_sports_5_hd",
+    "title": "SONY SPORTS 5 HD",
+    "logo": "http://103.144.89.251/assets/images/sony sports 5 hd.png",
+    "url": "http://203.18.159.115/STARGOLDSELECTHD/tracks-v1a1/mono.m3u8",
+    "category": "sports"
+  },
+  {
+    "id": "ssc_sports",
+    "title": "SSC SPORTS",
+    "logo": "http://103.144.89.251/assets/images/ssc 1 hd.png",
+    "url": "http://203.18.159.115/STARPLUSHD/tracks-v1a1/mono.m3u8",
+    "category": "sports"
+  },
+  {
+    "id": "ssc_sports_5_hd",
+    "title": "SSC SPORTS 5 HD",
+    "logo": "http://103.144.89.251/assets/images/ssc 5 hd.png",
+    "url": "http://203.18.159.115/STARMOVIESHD/tracks-v1a1/mono.m3u8",
+    "category": "sports"
+  },
+  {
+    "id": "star_select_1_hd",
+    "title": "STAR SELECT 1 HD",
+    "logo": "http://103.144.89.251/assets/images/STAR SELECT 1 HD1745038777.png",
+    "url": "http://203.18.159.115/STARMOVIESSELECTHD/tracks-v1a1/mono.m3u8",
+    "category": "sports"
+  },
+  {
+    "id": "star_sports_1_hd",
+    "title": "STAR SPORTS 1 HD",
+    "logo": "http://103.144.89.251/assets/images/STAR SPORTS 1 HD1744991778.png",
+    "url": "http://203.18.159.115/ZEECINEMAHD/tracks-v1a1/mono.m3u8",
+    "category": "sports"
+  },
+  {
+    "id": "star_sports_2_hd",
+    "title": "STAR SPORTS 2 HD",
+    "logo": "http://103.144.89.251/assets/images/STAR SPORTS 2 HD1744991842.png",
+    "url": "http://203.18.159.115/ZEETVHD/tracks-v1a1/mono.m3u8",
+    "category": "sports"
+  },
+  {
+    "id": "star_sports_3",
+    "title": "STAR SPORTS 3",
+    "logo": "http://103.144.89.251/assets/images/STAR SPORTS 31745039893.png",
+    "url": "http://203.18.159.115/ZEECAFEHD/tracks-v1a1/mono.m3u8",
+    "category": "sports"
+  },
+  {
+    "id": "star_sports_select_2_hd",
+    "title": "STAR SPORTS SELECT 2 HD",
+    "logo": "http://103.144.89.251/assets/images/STAR SPORTS SELECT 2 HD1745033722.png",
+    "url": "http://203.18.159.115/ZOOM/tracks-v1a1/mono.m3u8",
+    "category": "sports"
+  },
+  {
+    "id": "t_sports",
+    "title": "T SPORTS",
+    "logo": "http://103.144.89.251/assets/images/T SPORTS1744972630.png",
+    "url": "http://203.18.159.115/ZING/tracks-v1a1/mono.m3u8",
+    "category": "sports"
+  },
+  {
+    "id": "aljazeeta_hd",
+    "title": "ALJAZEETA HD",
+    "logo": "http://103.144.89.251/assets/images/ALJAZEETA HD1745044358.png",
+    "url": "http://203.18.159.115/ANDFLIXHD/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "and_flix_hd",
+    "title": "AND FLIX HD",
+    "logo": "http://103.144.89.251/assets/images/AND FLIX HD1745040018.png",
+    "url": "http://203.18.159.115/ANDPICTURSHD/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "and_prive_hd",
+    "title": "AND PRIVE HD",
+    "logo": "http://103.144.89.251/assets/images/AND PRIVE HD1745040451.png",
+    "url": "http://203.18.159.115/ANDPRIVEHD/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "and_xplore",
+    "title": "AND XPLORE",
+    "logo": "http://103.144.89.251/assets/images/AND XPLORE1745043080.png",
+    "url": "http://203.18.159.115/ANDXPLORE/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "animal_planet_hd",
+    "title": "ANIMAL PLANET HD",
+    "logo": "http://103.144.89.251/assets/images/ANIMAL PLANET HD1745038671.png",
+    "url": "http://203.18.159.115/HUMTV/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "axn_hd",
+    "title": "AXN HD",
+    "logo": "http://103.144.89.251/assets/images/AXN HD1745045171.png",
+    "url": "http://203.18.159.115/BALBHARAT/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "bbc_earth_hd",
+    "title": "BBC EARTH HD",
+    "logo": "http://103.144.89.251/assets/images/BBC EARTH HD1745150455.png",
+    "url": "http://203.18.159.115/CARTOONNETWORK/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "bbc_news",
+    "title": "BBC NEWS",
+    "logo": "http://103.144.89.251/assets/images/BBC NEWS1745042816.png",
+    "url": "http://203.18.159.115/NICK/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "discovery_hd",
+    "title": "DISCOVERY HD",
+    "logo": "http://103.144.89.251/assets/images/discovery hd.png",
+    "url": "http://203.18.159.115/NICKJR/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "hbo_hd",
+    "title": "HBO HD",
+    "logo": "http://103.144.89.251/assets/images/HBO HD1745045202.png",
+    "url": "http://203.18.159.115/POGO/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "history_tv_hd",
+    "title": "HISTORY TV HD",
+    "logo": "http://103.144.89.251/assets/images/HISTORY TV HD1745033679.png",
+    "url": "http://203.18.159.115/SONYYAY/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "hitz_music",
+    "title": "HITZ MUSIC",
+    "logo": "http://103.144.89.251/assets/images/HITZ MUSIC1745043478.png",
+    "url": "http://203.18.159.115/SONIC/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "lotus_tv",
+    "title": "LOTUS TV",
+    "logo": "http://103.144.89.251/assets/images/LOTUS TV1745044960.png",
+    "url": "http://203.18.159.115/HUNGAMA/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "love_nature",
+    "title": "LOVE NATURE",
+    "logo": "http://103.144.89.251/assets/images/LOVE NATURE1745043370.png",
+    "url": "http://203.18.159.115/SUPERHUNGAMA/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "mn_plus",
+    "title": "MN PLUS",
+    "logo": "http://103.144.89.251/assets/images/MN PLUS1745040057.png",
+    "url": "http://203.18.159.115/TSPORTS/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "mnx_hd",
+    "title": "MNX HD",
+    "logo": "http://103.144.89.251/assets/images/MNX HD1745039955.png",
+    "url": "http://203.18.159.115/PTVSPORTSHD/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "movies_now_hd",
+    "title": "MOVIES NOW HD",
+    "logo": "http://103.144.89.251/assets/images/MOVIES NOW HD1745040368.png",
+    "url": "http://203.18.159.115/ASPORTSHD/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "natgeo_hd",
+    "title": "NATGEO HD",
+    "logo": "http://103.144.89.251/assets/images/NATGEO HD1745038634.png",
+    "url": "http://203.18.159.115/STARSPORTS1HD/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "natgeo_wild_hd",
+    "title": "NATGEO WILD HD",
+    "logo": "http://103.144.89.251/assets/images/NATGEO WILD HD1745038542.png",
+    "url": "http://203.18.159.115/STARSPORTS2HD/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "romedy_now",
+    "title": "ROMEDY NOW",
+    "logo": "http://103.144.89.251/assets/images/ROMEDY NOW1745039988.png",
+    "url": "http://203.18.159.115/STARSPORTS3/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "sony_bbc_earth_hd",
+    "title": "SONY BBC EARTH HD",
+    "logo": "http://103.144.89.251/assets/images/SONY BBC EARTH HD1745031522.png",
+    "url": "http://203.18.159.115/STARSELECT1HD/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "sony_pix_hd",
+    "title": "SONY PIX HD",
+    "logo": "http://103.144.89.251/assets/images/SONY PIX HD1745039925.png",
+    "url": "http://203.18.159.115/STARSPORTSSELECT2HD/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "star_movies_hd",
+    "title": "STAR MOVIES HD",
+    "logo": "http://103.144.89.251/assets/images/STAR MOVIES HD1745040174.png",
+    "url": "http://203.18.159.115/SONYSPORTS1HD/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "star_movies_select_hd",
+    "title": "STAR MOVIES SELECT HD",
+    "logo": "http://103.144.89.251/assets/images/STAR MOVIES SELECT HD1745038723.png",
+    "url": "http://203.18.159.115/SONYSPORTS2HD/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "tlc_hd",
+    "title": "TLC HD",
+    "logo": "http://103.144.89.251/assets/images/TLC HD1745033484.png",
+    "url": "http://203.18.159.115/SONYSPORTS3/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "travel_xp",
+    "title": "TRAVEL XP",
+    "logo": "http://103.144.89.251/assets/images/TRAVEL XP1745043118.png",
+    "url": "http://203.18.159.115/SONYSPORTS4/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "zee_cafe_hd",
+    "title": "ZEE CAFE HD",
+    "logo": "http://103.144.89.251/assets/images/ZEE CAFE HD1745040102.png",
+    "url": "http://203.18.159.115/SONYSPORTS5HD/tracks-v1a1/mono.m3u8",
+    "category": "english"
+  },
+  {
+    "id": "and_picturs_hd",
+    "title": "AND PICTURS HD",
+    "logo": "http://103.144.89.251/assets/images/AND PICTURS HD1745031440.png",
+    "url": "http://203.18.159.115/SSCSPORTS/tracks-v1a1/mono.m3u8",
+    "category": "hindi"
+  },
+  {
+    "id": "colors_cineplex_hd",
+    "title": "COLORS CINEPLEX HD",
+    "logo": "http://103.144.89.251/assets/images/COLORS CINEPLEX HD1745033519.png",
+    "url": "http://203.18.159.115/SSCSPORTS5HD/tracks-v1a1/mono.m3u8",
+    "category": "hindi"
+  },
+  {
+    "id": "colors_hd",
+    "title": "COLORS HD",
+    "logo": "http://103.144.89.251/assets/images/COLORS HD1745031404.png",
+    "url": "http://203.18.159.115/FASTSPORTSHD/tracks-v1a1/mono.m3u8",
+    "category": "hindi"
+  },
+  {
+    "id": "geo_news_hd",
+    "title": "GEO NEWS HD",
+    "logo": "http://103.144.89.251/assets/images/GEO NEWS HD1745044892.png",
+    "url": "http://203.18.159.115/EUROSPORTSHD/tracks-v1a1/mono.m3u8",
+    "category": "hindi"
+  },
+  {
+    "id": "hum_tv",
+    "title": "HUM TV",
+    "logo": "http://103.144.89.251/assets/images/HUM TV1745044837.png",
+    "url": "http://203.18.159.115/GOLFSPORTS/tracks-v1a1/mono.m3u8",
+    "category": "hindi"
+  },
+  {
+    "id": "sony_ent_hd",
+    "title": "SONY ENT HD",
+    "logo": "http://103.144.89.251/assets/images/SONY ENT HD1745033553.png",
+    "url": "http://203.18.159.115/NATGEOWILDHD/tracks-v1a1/mono.m3u8",
+    "category": "hindi"
+  },
+  {
+    "id": "sony_max_hd",
+    "title": "SONY MAX HD",
+    "logo": "http://103.144.89.251/assets/images/SONY MAX HD1745034069.png",
+    "url": "http://203.18.159.115/NATGEOHD/tracks-v1a1/mono.m3u8",
+    "category": "hindi"
+  },
+  {
+    "id": "star_bharat_hd",
+    "title": "STAR BHARAT HD",
+    "logo": "http://103.144.89.251/assets/images/STAR BHARAT HD1745045255.png",
+    "url": "http://203.18.159.115/DISCOVERYHD/tracks-v1a1/mono.m3u8",
+    "category": "hindi"
+  },
+  {
+    "id": "star_gold_2_hd",
+    "title": "STAR GOLD 2 HD",
+    "logo": "http://103.144.89.251/assets/images/STAR GOLD 2 HD1745043441.png",
+    "url": "http://203.18.159.115/ANIMALPLANETHD/tracks-v1a1/mono.m3u8",
+    "category": "hindi"
+  },
+  {
+    "id": "star_gold_hd",
+    "title": "STAR GOLD HD",
+    "logo": "http://103.144.89.251/assets/images/STAR GOLD HD1745034037.png",
+    "url": "http://203.18.159.115/HISTORYTVHD/tracks-v1a1/mono.m3u8",
+    "category": "hindi"
+  },
+  {
+    "id": "star_gold_select_hd",
+    "title": "STAR GOLD SELECT HD",
+    "logo": "http://103.144.89.251/assets/images/STAR GOLD SELECT HD1745043508.png",
+    "url": "http://203.18.159.115/TLCHD/tracks-v1a1/mono.m3u8",
+    "category": "hindi"
+  },
+  {
+    "id": "star_plus_hd",
+    "title": "STAR PLUS HD",
+    "logo": "http://103.144.89.251/assets/images/STAR PLUS HD1745038577.png",
+    "url": "http://203.18.159.115/TRAVELXP/tracks-v1a1/mono.m3u8",
+    "category": "hindi"
+  },
+  {
+    "id": "zee_cinema_hd",
+    "title": "ZEE CINEMA HD",
+    "logo": "http://103.144.89.251/assets/images/ZEE CINEMA HD1745033602.png",
+    "url": "http://203.18.159.115/SONYBBCEARTHHD/tracks-v1a1/mono.m3u8",
+    "category": "hindi"
+  },
+  {
+    "id": "zee_tv_hd",
+    "title": "ZEE TV HD",
+    "logo": "http://103.144.89.251/assets/images/ZEE TV HD1745033383.png",
+    "url": "http://203.18.159.115/BBCEARTHHD/tracks-v1a1/mono.m3u8",
+    "category": "hindi"
+  },
+  {
+    "id": "zing",
+    "title": "ZING",
+    "logo": "http://103.144.89.251/assets/images/ZING1745042718.png",
+    "url": "http://203.18.159.115/BBCNEWS/tracks-v1a1/mono.m3u8",
+    "category": "hindi"
+  },
+  {
+    "id": "zoom",
+    "title": "ZOOM",
+    "logo": "http://103.144.89.251/assets/images/ZOOM1745040961.png",
+    "url": "http://203.18.159.115/ALJAZEETAHD/tracks-v1a1/mono.m3u8",
+    "category": "hindi"
+  },
+  {
+    "id": "bal_bharat",
+    "title": "BAL BHARAT",
+    "logo": "http://103.144.89.251/assets/images/BAL BHARAT1745041576.png",
+    "url": "http://203.18.159.115/GEONEWSHD/tracks-v1a1/mono.m3u8",
+    "category": "kids"
+  },
+  {
+    "id": "cartoon_network",
+    "title": "CARTOON NETWORK",
+    "logo": "http://103.144.89.251/assets/images/CARTOON NETWORK1745033414.png",
+    "url": "http://203.18.159.115/AXNHD/tracks-v1a1/mono.m3u8",
+    "category": "kids"
+  },
+  {
+    "id": "duranta_tv",
+    "title": "DURANTA TV",
+    "logo": "http://103.144.89.251/assets/images/DURANTA TV1745043400.png",
+    "url": "http://203.18.159.115/HBOHD/tracks-v1a1/mono.m3u8",
+    "category": "kids"
+  },
+  {
+    "id": "hungama",
+    "title": "HUNGAMA",
+    "logo": "http://103.144.89.251/assets/images/HUNGAMA1745041551.png",
+    "url": "http://203.18.159.115/HITZMUSIC/tracks-v1a1/mono.m3u8",
+    "category": "kids"
+  },
+  {
+    "id": "nick",
+    "title": "NICK",
+    "logo": "http://103.144.89.251/assets/images/NICK1745041451.png",
+    "url": "http://203.18.159.115/LOTUSTV/tracks-v1a1/mono.m3u8",
+    "category": "kids"
+  },
+  {
+    "id": "nick_jr",
+    "title": "NICK JR",
+    "logo": "http://103.144.89.251/assets/images/NICK JR1745042397.png",
+    "url": "http://203.18.159.115/MNPLUS/tracks-v1a1/mono.m3u8",
+    "category": "kids"
+  },
+  {
+    "id": "pogo",
+    "title": "POGO",
+    "logo": "http://103.144.89.251/assets/images/POGO1745041515.png",
+    "url": "http://203.18.159.115/MNXHD/tracks-v1a1/mono.m3u8",
+    "category": "kids"
+  },
+  {
+    "id": "sonic",
+    "title": "SONIC",
+    "logo": "http://103.144.89.251/assets/images/SONIC1745041154.png",
+    "url": "http://203.18.159.115/MOVIESNOWHD/tracks-v1a1/mono.m3u8",
+    "category": "kids"
+  },
+  {
+    "id": "sony_yay",
+    "title": "SONY YAY",
+    "logo": "http://103.144.89.251/assets/images/SONY YAY1745045046.png",
+    "url": "http://203.18.159.115/ROMEDYNOW/tracks-v1a1/mono.m3u8",
+    "category": "kids"
+  },
+  {
+    "id": "super_hungama",
+    "title": "SUPER HUNGAMA",
+    "logo": "http://103.144.89.251/assets/images/SUPER HUNGAMA1745044022.png",
+    "url": "http://203.18.159.115/PEACETVBANGLA/tracks-v1a1/mono.m3u8",
+    "category": "kids"
+  },
+  {
+    "id": "madani_tv_hd",
+    "title": "MADANI TV HD",
+    "logo": "http://103.144.89.251/assets/images/MADANI TV HD1745044303.png",
+    "url": "http://203.18.159.115/MADANITVHD/tracks-v1a1/mono.m3u8",
+    "category": "islamic"
+  }
+]
