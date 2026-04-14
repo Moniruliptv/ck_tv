@@ -1,0 +1,25 @@
+name: Player Page Scrap
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # প্রতি ৩০ মিনিটে run
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Run scraper
+        run: python player_scrap.py
